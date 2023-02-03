@@ -1,13 +1,14 @@
-import React from "react";
-import style from '.Botao.module.scss';
+import React from 'react';
+import style from './Button.module.scss';
 
-class Button extends React.Component<{ texto: string }> {
-	render(): React.ReactNode {
-		return(
-			<button className={style.botao}>
-				{ this.props.texto }
-			</button>
-		)
-	}
+class Button extends React.Component<any,any> {
+  render() {
+    return (
+      <button className={style.botao}>
+        {this.props.children}
+      </button>
+    )
+  }
 }
+
 export default Button;

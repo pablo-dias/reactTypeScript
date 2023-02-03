@@ -3,7 +3,13 @@ import Button from "../Button";
 import style from './Form.module.scss';
 
 class Form extends React.Component {
-	render(): React.ReactNode {
+
+	state = {
+		task: "",
+		time: ""
+	}
+
+	render() {
 		return (
 			<form className={style.novaTarefa}>
 				<div className={style.inputContainer}>
@@ -28,7 +34,9 @@ class Form extends React.Component {
 						required
 					/>
 				</div>
-				<Button texto="Adicionar"/>
+				<Button>
+					Adicionar
+				</Button>
 			</form>
 		)
 	}
